@@ -5,8 +5,8 @@ An intelligent Model Context Protocol (MCP) server that tracks e-commerce produc
 ## Project Status
 
 - [x] **Milestone 1**: Isolated Environment Setup, Domain Models & Statistical Engine
-- [ ] **Milestone 2**: Persistent SQLite Storage & Scraper Pipeline
-- [ ] **Milestone 3**: MCP Server Tools & Automated Alert Engine
+- [x] **Milestone 2**: Persistent SQLite Storage & Watchlist Persistence Layer
+- [ ] **Milestone 3**: Scraper Pipeline, MCP Server Tools & Automated Alert Engine
 
 ## Installation & Setup
 
