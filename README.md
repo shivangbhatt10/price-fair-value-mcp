@@ -7,7 +7,7 @@ An intelligent Model Context Protocol (MCP) server that tracks e-commerce produc
 - [x] **Milestone 1**: Isolated Environment Setup, Domain Models & Statistical Engine
 - [x] **Milestone 2**: Persistent SQLite Storage & Watchlist Persistence Layer
 - [x] **Milestone 3**: PriceHistory.app Provider (URL Resolver, XOR Decryption, Meta Fallback)
-- [ ] **Milestone 4**: MCP Server Tools & Automated Alert Engine
+- [x] **Milestone 4**: FastMCP Server Tools, OpenClaw Skill File & Full Test Suite
 
 ## Installation & Setup
 
@@ -22,6 +22,24 @@ An intelligent Model Context Protocol (MCP) server that tracks e-commerce produc
    ```bash
    .\.venv\Scripts\python.exe -m pytest tests/ -v
    ```
+
+3. **Run MCP Server (stdio)**:
+   ```bash
+   .\.venv\Scripts\python.exe server.py
+   # or
+   .\.venv\Scripts\python.exe -m price_fair_value.server
+   ```
+
+## MCP Tools Reference
+
+- `evaluate_price`: Evaluates live product pricing from URL, computes percentile & true discount, warns on deceptive MRPs.
+- `get_price_history`: Returns stored price points and historical summary from SQLite DB.
+- `watch_product`: Adds product to watchlist with target price or deal rating criteria.
+- `unwatch_product`: Removes product from watchlist.
+- `list_watchlist`: Formatted table of actively monitored products.
+- `check_watchlist_alerts`: Refreshes watched items and alerts on price drops.
+- `record_custom_observation`: Manually logs price points into SQLite DB.
+- `evaluate_custom_series`: Evaluates arbitrary raw price lists (Amazon US, Keepa, CamelCamelCamel).
 
 ## Architecture (Milestone 1)
 
